@@ -1,0 +1,539 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        tools:context=".GateWay"
+        android:id="@+id/parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".GateWay"
+            android:background="#fff">
+
+        <LinearLayout
+                android:id="@+id/header"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:stateListAnimator="@animator/header_elevation"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:animateLayoutChanges="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                        android:id="@+id/txt_hello"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="32dp"
+                        android:layout_marginTop="16dp"
+                        android:layout_marginBottom="64dp"
+                        android:text="Vườn hoa"
+                        android:textSize="30sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        android:textColor="#000"/>
+
+                <com.google.android.material.tabs.TabLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tab"
+                        app:layout_constraintTop_toBottomOf="@+id/txt_hello"
+                        android:layout_marginTop="24dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:tabTextColor="#000">
+                </com.google.android.material.tabs.TabLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                android:layout_marginEnd="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                android:layout_marginBottom="8dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:padding="8dp"
+                android:visibility="gone">
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_rounded"
+                    android:elevation="5dp"
+                    android:padding="8dp">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="100"
+                        android:padding="8dp">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="80">
+
+                        <TextView
+                                android:text="Hoa hồng"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView4"
+                                android:textStyle="bold"
+                                android:textSize="16dp"
+                                android:textColor="#000"/>
+
+                        <TextView
+                                android:text="E-001-F:0"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:id="@+id/textView5"/>
+                    </LinearLayout>
+
+                    <ImageView
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/alarm"
+                            android:id="@+id/imageView4"
+                            android:layout_weight="10"
+                            android:layout_width="0dp"/>
+
+                    <ImageView
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/sync"
+                            android:id="@+id/imageView5"
+                            android:layout_weight="10"
+                            android:layout_width="0dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/white_rounded_bg">
+
+                    <TextView
+                            android:text="Nhiệt độ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#fff"/>
+
+                    <TextView
+                            android:text="29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="#fff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/white_rounded_bg"
+                        android:layout_marginTop="5dp">
+
+                    <TextView
+                            android:text="Độ ẩm không khí"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#fff"/>
+
+                    <TextView
+                            android:text="75"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="#fff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/white_rounded_bg"
+                        android:layout_marginTop="5dp">
+
+                    <TextView
+                            android:text="Ánh sáng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#fff"/>
+
+                    <TextView
+                            android:text="250"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="#fff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/white_rounded_bg"
+                        android:layout_marginTop="5dp">
+
+                    <TextView
+                            android:text="Độ ẩm đất"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#fff"/>
+
+                    <TextView
+                            android:text="5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="#fff"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/white_rounded"
+                    android:elevation="5dp"
+                    android:padding="8dp"
+                    android:layout_marginTop="16dp">
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:weightSum="100"
+                        android:padding="8dp">
+
+                    <LinearLayout
+                            android:orientation="vertical"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="80">
+
+                        <TextView
+                                android:text="Hoa hồng"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textStyle="bold"
+                                android:textSize="16dp"
+                                android:textColor="#000"/>
+
+                        <TextView
+                                android:text="E-003-F:0"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                />
+                    </LinearLayout>
+
+                    <ImageView
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/alarm"
+                            android:layout_weight="10"
+                            android:layout_width="0dp"/>
+
+                    <ImageView
+                            android:layout_height="24dp"
+                            app:srcCompat="@drawable/sync"
+                            android:layout_weight="10"
+                            android:layout_width="0dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/white_rounded_bg">
+
+                    <TextView
+                            android:text="Nhiệt độ"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#fff"/>
+
+                    <TextView
+                            android:text="29"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="#fff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/white_rounded_bg"
+                        android:layout_marginTop="5dp">
+
+                    <TextView
+                            android:text="Độ ẩm không khí"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#fff"/>
+
+                    <TextView
+                            android:text="80"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="#fff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/white_rounded_bg"
+                        android:layout_marginTop="5dp">
+
+                    <TextView
+                            android:text="Ánh sáng"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#fff"/>
+
+                    <TextView
+                            android:text="250"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="#fff"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="8dp"
+                        android:background="@drawable/white_rounded_bg"
+                        android:layout_marginTop="5dp">
+
+                    <TextView
+                            android:text="Độ ẩm đất"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#fff"/>
+
+                    <TextView
+                            android:text="5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textSize="30sp"
+                            android:textAlignment="textEnd"
+                            android:textColor="#fff"/>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@+id/header"
+                app:layout_constraintStart_toStartOf="parent"
+                android:layout_marginStart="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginEnd="8dp">
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:srcCompat="@drawable/light_bulb"
+                            android:layout_weight="1"
+                            app:fabSize="normal"
+                            app:backgroundTint="@color/color_orange"
+                            android:layout_marginBottom="5dp"
+                            app:fabCustomSize="64dp"/>
+
+                    <TextView
+                            android:text="Đèn 1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#000"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:srcCompat="@drawable/water_pump"
+                            android:layout_weight="1"
+                            app:fabSize="normal"
+                            app:backgroundTint="@color/colorPrimaryDark"
+                            android:layout_marginBottom="5dp"
+                            app:fabCustomSize="64dp"/>
+
+                    <TextView
+                            android:text="Bơm 1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"/>
+                </LinearLayout>
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:srcCompat="@drawable/fan"
+                            android:id="@+id/floatingActionButton"
+                            android:layout_weight="1"
+                            app:fabSize="normal"
+                            app:backgroundTint="@color/colorPrimaryDark"
+                            android:layout_marginBottom="5dp"
+                            app:fabCustomSize="64dp"/>
+
+                    <TextView
+                            android:text="Quạt 1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:id="@+id/textView8"
+                            android:layout_weight="1"
+                            android:textColor="#000"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:layout_marginTop="16dp"
+                    android:weightSum="3">
+
+                <LinearLayout
+                        android:orientation="vertical"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                    <com.google.android.material.floatingactionbutton.FloatingActionButton
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:clickable="true"
+                            app:srcCompat="@drawable/fan"
+                            android:layout_weight="1"
+                            app:fabSize="normal"
+                            app:backgroundTint="@color/color_orange"
+                            android:layout_marginBottom="5dp"
+                            app:fabCustomSize="64dp"/>
+
+                    <TextView
+                            android:text="Quạt 2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:textColor="#000"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/fab_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_add_white_24dp"
+            app:backgroundTint="@color/color_red"
+            app:fabSize="normal"
+            app:maxImageSize="36dp"
+            android:layout_gravity="end|bottom"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="8dp"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
