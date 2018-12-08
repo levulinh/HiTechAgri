@@ -6,7 +6,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff"
-        tools:context=".DashboardActivity">
+        tools:context=".activities.DashboardActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -38,8 +38,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginStart="32dp"
-                        android:layout_marginTop="32dp"
-                        android:layout_marginBottom="64dp"
+                        android:layout_marginTop="64dp"
+                        android:layout_marginBottom="32dp"
                         android:text="Nông nghiệp HiTech"
                         android:textColor="#000"
                         android:textSize="30sp"
@@ -78,119 +78,6 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/header">
-
-            <LinearLayout
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintBottom_toBottomOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    android:padding="8dp">
-
-                <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:elevation="5dp"
-                        android:background="@drawable/white_rounded_bg"
-                        android:id="@+id/layout_1">
-
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/gateway"
-                                android:id="@+id/imageView2"
-                                android:layout_weight="1"
-                                android:padding="5dp"
-                                android:background="@drawable/white_rounded"/>
-
-                        <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginLeft="16dp"
-                                android:layout_gravity="center_vertical">
-
-                            <TextView
-                                    android:text="Vườn hoa"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold"
-                                    android:textColor="#fff"/>
-
-                            <TextView
-                                    android:text="G001"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView2"
-                                    android:textColor="#fff"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-
-                <LinearLayout
-                        android:orientation="vertical"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_vertical"
-                        android:padding="16dp"
-                        android:elevation="5dp"
-                        android:background="@drawable/white_rounded_bg"
-                        android:layout_marginTop="8dp">
-
-                    <LinearLayout
-                            android:orientation="horizontal"
-                            android:layout_width="match_parent"
-                            android:layout_height="wrap_content">
-
-                        <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="wrap_content"
-                                app:srcCompat="@drawable/gateway"
-                                android:id="@+id/imageView3"
-                                android:layout_weight="1"
-                                android:padding="5dp"
-                                android:background="@drawable/white_rounded"/>
-
-                        <LinearLayout
-                                android:orientation="vertical"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:layout_weight="1"
-                                android:layout_marginLeft="16dp"
-                                android:layout_gravity="center_vertical">
-
-                            <TextView
-                                    android:text="Vườn rau"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView0"
-                                    android:textSize="18sp"
-                                    android:textStyle="bold"
-                                    android:textColor="#fff"/>
-
-                            <TextView
-                                    android:text="G003"
-                                    android:layout_width="match_parent"
-                                    android:layout_height="wrap_content"
-                                    android:id="@+id/textView3"
-                                    android:textColor="#fff"/>
-                        </LinearLayout>
-                    </LinearLayout>
-                </LinearLayout>
-            </LinearLayout>
 
             <LinearLayout
                     android:id="@+id/layout_empty"
@@ -232,7 +119,7 @@
                     app:layout_constraintEnd_toEndOf="parent"
                     app:layout_constraintStart_toStartOf="parent"
                     app:layout_constraintTop_toTopOf="parent"
-                    android:visibility="gone"/>
+                    android:visibility="visible"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

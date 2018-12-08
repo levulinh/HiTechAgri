@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white">
+
+    <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:weightSum="10"
+            android:gravity="center"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="8dp">
+
+        <ImageView
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                app:srcCompat="@drawable/ic_leaf"
+                android:id="@+id/imageView2"
+                android:layout_weight="1"/>
+
+        <TextView
+                android:text="Thêm bộ điều khiển"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textView"
+                android:layout_weight="9"
+                android:layout_marginStart="8dp"
+                android:textStyle="bold"/>
+    </LinearLayout>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edt_gate_id"
+            android:textColor="@color/color_dark"
+            android:background="@color/white"
+            android:hint="ID bộ điều khiển"
+            android:paddingStart="16dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textSize="16sp"/>
+
+    <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName"
+            android:ems="10"
+            android:id="@+id/edt_gate_name"
+            android:textColor="@color/color_dark"
+            android:background="@color/white"
+            android:hint="Tên bộ điều khiển"
+            android:paddingStart="16dp"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp"
+            android:textSize="14sp"/>
+
+    <Button
+            android:text="Thêm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/btn_add"
+            android:layout_gravity="right"
+            style="@style/Widget.MaterialComponents.Button.TextButton"
+            android:textStyle="bold"
+            android:textAllCaps="false"/>
+</LinearLayout>

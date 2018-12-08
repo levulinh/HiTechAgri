@@ -1,8 +1,9 @@
-package com.hellosg.studio.hitechagri
+package com.hellosg.studio.hitechagri.activities
 
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.hellosg.studio.hitechagri.R
 
 class SignUpActivity : AppCompatActivity() {
 

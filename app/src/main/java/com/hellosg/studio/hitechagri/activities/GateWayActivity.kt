@@ -1,10 +1,11 @@
-package com.hellosg.studio.hitechagri
+package com.hellosg.studio.hitechagri.activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.hellosg.studio.hitechagri.R
 import kotlinx.android.synthetic.main.activity_gate_way.*
 
-class GateWay : AppCompatActivity() {
+class GateWayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

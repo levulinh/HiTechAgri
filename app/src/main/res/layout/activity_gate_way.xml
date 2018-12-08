@@ -6,13 +6,13 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="#fff"
-        tools:context=".GateWay"
+        tools:context=".activities.GateWayActivity"
         android:id="@+id/parent">
 
     <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            tools:context=".GateWay"
+            tools:context=".activities.GateWayActivity"
             android:background="#fff">
 
         <LinearLayout
@@ -79,7 +79,7 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_rounded"
+                    android:background="@drawable/bg_white_rounded_filled"
                     android:elevation="5dp"
                     android:padding="8dp">
 
@@ -114,7 +114,7 @@
 
                     <ImageView
                             android:layout_height="24dp"
-                            app:srcCompat="@drawable/alarm"
+                            app:srcCompat="@drawable/ic_alarm"
                             android:id="@+id/imageView4"
                             android:layout_weight="10"
                             android:layout_width="0dp"/>
@@ -133,7 +133,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:background="@drawable/white_rounded_bg">
+                        android:background="@drawable/bg_blue_rounded_filled">
 
                     <TextView
                             android:text="Nhiệt độ"
@@ -158,7 +158,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:background="@drawable/white_rounded_bg"
+                        android:background="@drawable/bg_blue_rounded_filled"
                         android:layout_marginTop="5dp">
 
                     <TextView
@@ -184,7 +184,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:background="@drawable/white_rounded_bg"
+                        android:background="@drawable/bg_blue_rounded_filled"
                         android:layout_marginTop="5dp">
 
                     <TextView
@@ -210,7 +210,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:background="@drawable/white_rounded_bg"
+                        android:background="@drawable/bg_blue_rounded_filled"
                         android:layout_marginTop="5dp">
 
                     <TextView
@@ -236,7 +236,7 @@
                     android:orientation="vertical"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@drawable/white_rounded"
+                    android:background="@drawable/bg_white_rounded_filled"
                     android:elevation="5dp"
                     android:padding="8dp"
                     android:layout_marginTop="16dp">
@@ -271,7 +271,7 @@
 
                     <ImageView
                             android:layout_height="24dp"
-                            app:srcCompat="@drawable/alarm"
+                            app:srcCompat="@drawable/ic_alarm"
                             android:layout_weight="10"
                             android:layout_width="0dp"/>
 
@@ -288,7 +288,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:background="@drawable/white_rounded_bg">
+                        android:background="@drawable/bg_blue_rounded_filled">
 
                     <TextView
                             android:text="Nhiệt độ"
@@ -313,7 +313,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:background="@drawable/white_rounded_bg"
+                        android:background="@drawable/bg_blue_rounded_filled"
                         android:layout_marginTop="5dp">
 
                     <TextView
@@ -339,7 +339,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:background="@drawable/white_rounded_bg"
+                        android:background="@drawable/bg_blue_rounded_filled"
                         android:layout_marginTop="5dp">
 
                     <TextView
@@ -365,7 +365,7 @@
                         android:layout_height="wrap_content"
                         android:gravity="center_vertical"
                         android:padding="8dp"
-                        android:background="@drawable/white_rounded_bg"
+                        android:background="@drawable/bg_blue_rounded_filled"
                         android:layout_marginTop="5dp">
 
                     <TextView
@@ -418,7 +418,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:clickable="true"
-                            app:srcCompat="@drawable/light_bulb"
+                            app:srcCompat="@drawable/ic_light_bulb"
                             android:layout_weight="1"
                             app:fabSize="normal"
                             app:backgroundTint="@color/color_orange"
@@ -469,7 +469,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:clickable="true"
-                            app:srcCompat="@drawable/fan"
+                            app:srcCompat="@drawable/ic_fan"
                             android:id="@+id/floatingActionButton"
                             android:layout_weight="1"
                             app:fabSize="normal"
@@ -506,7 +506,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:clickable="true"
-                            app:srcCompat="@drawable/fan"
+                            app:srcCompat="@drawable/ic_fan"
                             android:layout_weight="1"
                             app:fabSize="normal"
                             app:backgroundTint="@color/color_orange"
