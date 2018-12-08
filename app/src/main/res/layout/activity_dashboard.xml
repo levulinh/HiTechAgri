@@ -142,6 +142,7 @@
             app:backgroundTint="@color/color_red"
             app:fabSize="normal"
             app:maxImageSize="36dp"
-            app:layout_anchor="@id/bottom_app_bar"/>
+            app:layout_anchor="@id/bottom_app_bar"
+            android:clickable="true"/>
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
