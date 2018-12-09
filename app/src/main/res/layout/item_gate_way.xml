@@ -22,28 +22,29 @@
             android:elevation="6dp"/>
 
     <LinearLayout
-            android:orientation="horizontal"
+            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="100dp"
+            android:layout_height="wrap_content"
             android:layout_marginStart="40dp"
             android:background="@drawable/bg_white_rounded_filled"
             android:paddingTop="16dp"
             android:paddingStart="48dp"
-            android:elevation="3dp"
+            android:elevation="5dp"
             android:layout_marginBottom="4dp"
             android:layout_marginEnd="8dp"
             android:layout_marginTop="4dp"
             android:weightSum="10"
-            android:paddingEnd="16dp">
+            android:paddingEnd="16dp"
+            android:paddingBottom="8dp">
 
         <LinearLayout
                 android:orientation="vertical"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_weight="8">
 
             <TextView
-                    android:layout_width="match_parent"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_gate_name"
                     android:textStyle="bold"
@@ -60,22 +61,33 @@
 
         </LinearLayout>
 
-        <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_edit"
-                android:id="@+id/btn_edit"
-                android:layout_weight="1"
-                android:layout_marginEnd="5dp"
-                android:clickable="true"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end">
 
-        <ImageView
-                android:layout_width="24dp"
-                android:layout_height="24dp"
-                app:srcCompat="@drawable/ic_delete"
-                android:id="@+id/btn_delete"
-                android:layout_weight="1"
-                android:clickable="true"/>
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/ic_edit"
+                    android:id="@+id/btn_edit"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="5dp"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"/>
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/ic_delete"
+                    android:id="@+id/btn_delete"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"/>
+        </LinearLayout>
 
     </LinearLayout>
 

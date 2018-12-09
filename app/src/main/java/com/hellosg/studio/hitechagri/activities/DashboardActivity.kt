@@ -9,12 +9,31 @@ import androidx.recyclerview.widget.RecyclerView
 import com.hellosg.studio.hitechagri.R
 import com.hellosg.studio.hitechagri.adapters.GateAdapter
 import com.hellosg.studio.hitechagri.fragments.AddGateBottomSheet
+import com.hellosg.studio.hitechagri.fragments.DeleteGateBottomSheet
+import com.hellosg.studio.hitechagri.fragments.EditGateBottomSheet
 import com.hellosg.studio.hitechagri.models.GateWay
 import kotlinx.android.synthetic.main.activity_dashboard.*
 
-class DashboardActivity : AppCompatActivity(), AddGateBottomSheet.OnAddClickListener {
+class DashboardActivity : AppCompatActivity(),
+    AddGateBottomSheet.OnAddClickListener,
+    EditGateBottomSheet.OnEditClickListener,
+    DeleteGateBottomSheet.OnDeleteClickListener {
+
+    private lateinit var addBottomSheet: AddGateBottomSheet
+    private lateinit var editBottomSheet: EditGateBottomSheet
+    private lateinit var deleteBottomSheet: DeleteGateBottomSheet
+
     override fun onAddClick(name: String, id: String) {
         Toast.makeText(this, "$name / $id", Toast.LENGTH_SHORT).show()
+        addBottomSheet.dismiss()
+    }
+
+    override fun onEditClick(gate: GateWay) {
+        editBottomSheet.dismiss()
+    }
+
+    override fun onDeleteClick(gate: GateWay) {
+        deleteBottomSheet.dismiss()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -38,26 +57,21 @@ class DashboardActivity : AppCompatActivity(), AddGateBottomSheet.OnAddClickList
         gateList.add(GateWay("Random name", "G001"))
         gateList.add(GateWay("Random name", "G001"))
 
-        val adapter = GateAdapter(gateList, { gateWay ->
-            Toast.makeText(
-                this@DashboardActivity,
-                "Clicked",
-                Toast.LENGTH_SHORT
-            ).show()
-        },
+        val adapter = GateAdapter(gateList,
             { gateWay ->
                 Toast.makeText(
                     this@DashboardActivity,
-                    "Edit",
+                    "Clicked",
                     Toast.LENGTH_SHORT
                 ).show()
             },
             { gateWay ->
-                Toast.makeText(
-                    this@DashboardActivity,
-                    "Delete",
-                    Toast.LENGTH_SHORT
-                ).show()
+                editBottomSheet = EditGateBottomSheet.newInstance(gateWay)
+                editBottomSheet.show(supportFragmentManager, editBottomSheet.tag)
+            },
+            { gateWay ->
+                deleteBottomSheet = DeleteGateBottomSheet.newInstance(gateWay)
+                deleteBottomSheet.show(supportFragmentManager, deleteBottomSheet.tag)
             })
 
         rv_list_device.apply {
@@ -73,7 +87,7 @@ class DashboardActivity : AppCompatActivity(), AddGateBottomSheet.OnAddClickList
         }
 
         fab_add.setOnClickListener {
-            val addBottomSheet = AddGateBottomSheet()
+            addBottomSheet = AddGateBottomSheet()
             addBottomSheet.show(supportFragmentManager, addBottomSheet.tag)
         }
     }

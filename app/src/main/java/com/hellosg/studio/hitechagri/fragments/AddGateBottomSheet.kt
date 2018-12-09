@@ -32,7 +32,6 @@ class AddGateBottomSheet : BottomSheetDialogFragment() {
             activityCallback?.onAddClick(edtGateName.text.toString(), edtGateId.text.toString())
         }
 
-
         return view
     }
 
