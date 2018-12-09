@@ -121,7 +121,7 @@
 
                     <ImageView
                             android:layout_height="24dp"
-                            app:srcCompat="@drawable/sync"
+                            app:srcCompat="@drawable/ic_sync"
                             android:id="@+id/imageView5"
                             android:layout_weight="10"
                             android:layout_width="0dp"/>
@@ -277,7 +277,7 @@
 
                     <ImageView
                             android:layout_height="24dp"
-                            app:srcCompat="@drawable/sync"
+                            app:srcCompat="@drawable/ic_sync"
                             android:layout_weight="10"
                             android:layout_width="0dp"/>
                 </LinearLayout>

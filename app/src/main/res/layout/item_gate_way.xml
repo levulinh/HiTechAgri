@@ -7,6 +7,9 @@
              android:layout_height="wrap_content"
              android:weightSum="10"
              android:background="@drawable/bg_white_rounded_filled"
+             android:clipToPadding="false"
+             android:paddingStart="8dp"
+             android:paddingEnd="8dp"
              android:id="@+id/layout_parent">
 
 
@@ -16,7 +19,6 @@
             android:src="@drawable/ic_leaf"
             android:id="@+id/img_gate"
             android:translationZ="6dp"
-            android:layout_marginStart="8dp"
             android:layout_marginTop="16dp"
             android:adjustViewBounds="false"
             android:elevation="6dp"/>
@@ -25,23 +27,20 @@
             android:orientation="vertical"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginStart="40dp"
+            android:layout_marginStart="30dp"
             android:background="@drawable/bg_white_rounded_filled"
             android:paddingTop="16dp"
             android:paddingStart="48dp"
-            android:elevation="5dp"
             android:layout_marginBottom="4dp"
-            android:layout_marginEnd="8dp"
             android:layout_marginTop="4dp"
-            android:weightSum="10"
             android:paddingEnd="16dp"
-            android:paddingBottom="8dp">
+            android:paddingBottom="8dp" android:translationZ="2dp">
 
         <LinearLayout
                 android:orientation="vertical"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="8">
+        >
 
             <TextView
                     android:layout_width="wrap_content"
@@ -50,8 +49,7 @@
                     android:textStyle="bold"
                     android:textSize="20sp"
                     android:textColor="@color/black"
-                    tools:text="Gate Name"
-                    android:layout_weight="7"/>
+                    tools:text="Gate Name"/>
 
             <TextView
                     android:layout_width="match_parent"
@@ -72,21 +70,20 @@
                     android:layout_height="30dp"
                     app:srcCompat="@drawable/ic_edit"
                     android:id="@+id/btn_edit"
-                    android:layout_weight="1"
                     android:layout_marginEnd="5dp"
                     android:clickable="true"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:padding="5dp"/>
+                    android:padding="5dp" android:focusable="true"/>
 
             <ImageView
                     android:layout_width="30dp"
                     android:layout_height="30dp"
                     app:srcCompat="@drawable/ic_delete"
                     android:id="@+id/btn_delete"
-                    android:layout_weight="1"
                     android:clickable="true"
                     android:background="?android:attr/selectableItemBackgroundBorderless"
-                    android:padding="5dp"/>
+                    android:padding="5dp"
+                    android:focusable="true"/>
         </LinearLayout>
 
     </LinearLayout>

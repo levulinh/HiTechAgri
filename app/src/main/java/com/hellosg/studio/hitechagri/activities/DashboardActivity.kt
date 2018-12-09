@@ -6,12 +6,12 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.hellosg.studio.hitechagri.R
 import com.hellosg.studio.hitechagri.adapters.GateAdapter
 import com.hellosg.studio.hitechagri.fragments.AddGateBottomSheet
 import com.hellosg.studio.hitechagri.fragments.DeleteGateBottomSheet
 import com.hellosg.studio.hitechagri.fragments.EditGateBottomSheet
 import com.hellosg.studio.hitechagri.models.GateWay
+import com.hellosg.studio.hitechagri.R
 import kotlinx.android.synthetic.main.activity_dashboard.*
 
 class DashboardActivity : AppCompatActivity(),
@@ -77,7 +77,9 @@ class DashboardActivity : AppCompatActivity(),
         rv_list_device.apply {
             setAdapter(adapter)
             setHasFixedSize(false)
-            layoutManager = LinearLayoutManager(this@DashboardActivity, RecyclerView.VERTICAL, false)
+            layoutManager = LinearLayoutManager(this@DashboardActivity,
+                RecyclerView.VERTICAL,
+                false)
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
@@ -90,5 +92,9 @@ class DashboardActivity : AppCompatActivity(),
             addBottomSheet = AddGateBottomSheet()
             addBottomSheet.show(supportFragmentManager, addBottomSheet.tag)
         }
+
+        topToolbar.inflateMenu(R.menu.menu_dashboard)
+        topToolbar.title = "Tổng quan"
+        topToolbar.subtitle = "Danh sách bộ điều khiển trung tâm"
     }
 }
