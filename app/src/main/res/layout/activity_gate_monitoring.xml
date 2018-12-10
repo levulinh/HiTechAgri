@@ -88,7 +88,7 @@
                     android:clipToPadding="false"
                     android:visibility="visible"
                     android:elevation="2dp"
-                    tools:listitem="@layout/item_gate_way"/>
+                    tools:listitem="@layout/item_monitor_node"/>
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 

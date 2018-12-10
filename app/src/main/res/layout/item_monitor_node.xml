@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             xmlns:tools="http://schemas.android.com/tools"
+             android:orientation="horizontal"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:weightSum="10"
+             android:background="@drawable/bg_white_rounded_filled"
+             android:clipToPadding="false"
+             android:paddingStart="8dp"
+             android:paddingEnd="8dp"
+             android:id="@+id/layout_parent">
+
+
+    <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/ic_sensor"
+            android:id="@+id/img_gate"
+            android:translationZ="6dp"
+            android:adjustViewBounds="false"
+            android:elevation="6dp" android:layout_marginStart="16dp"/>
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_white_rounded_filled"
+            android:layout_marginBottom="4dp"
+            android:layout_marginTop="30dp"
+            android:translationZ="2dp">
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end" android:layout_marginEnd="16dp">
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/ic_edit"
+                    android:id="@+id/btn_edit"
+                    android:layout_marginEnd="5dp"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp" android:focusable="true"/>
+
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    app:srcCompat="@drawable/ic_delete"
+                    android:id="@+id/btn_delete"
+                    android:clickable="true"
+                    android:background="?android:attr/selectableItemBackgroundBorderless"
+                    android:padding="5dp"
+                    android:focusable="true"/>
+            <ImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp" app:srcCompat="@drawable/ic_refresh_black_36dp"
+                    android:id="@+id/btn_reload" android:layout_weight="1"/>
+        </LinearLayout>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/txt_node_name" tools:text="Node name"
+                android:textSize="18sp" android:textColor="@color/black" android:layout_marginStart="16dp"/>
+        <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" android:id="@+id/txt_node_id" tools:text="E-001-F:0"
+                android:layout_marginStart="16dp" android:layout_marginBottom="24dp"/>
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingTop="8dp"
+                android:paddingBottom="8dp" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="@color/light_red">
+            <TextView
+                    android:text="Nhiệt độ (°C)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:textColor="@color/color_red" android:textSize="18sp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/txt_temp_value" android:layout_weight="1"
+                    android:textAlignment="textEnd" tools:text="30" android:textSize="26sp"
+                    android:textColor="@color/color_red" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingTop="8dp"
+                android:paddingBottom="8dp" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="@color/light_yellow">
+            <TextView
+                    android:text="Độ ẩm không khí (%)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:textColor="@color/color_orange" android:textSize="18sp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/txt_air_humi_value" android:layout_weight="1"
+                    android:textAlignment="textEnd" tools:text="30" android:textSize="26sp"
+                    android:textColor="@color/color_orange" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingTop="8dp"
+                android:paddingBottom="8dp" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="@color/light_brown">
+            <TextView
+                    android:text="Độ ẩm đất (%)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:textColor="@color/brown" android:textSize="18sp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/txt_soil_humi_value" android:layout_weight="1"
+                    android:textAlignment="textEnd" tools:text="30" android:textSize="26sp"
+                    android:textColor="@color/brown" android:textStyle="bold"/>
+        </LinearLayout>
+
+        <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" android:paddingTop="8dp"
+                android:paddingBottom="8dp" android:paddingStart="16dp" android:paddingEnd="16dp"
+                android:background="@drawable/bg_light_blue_rounded_filled">
+            <TextView
+                    android:text="Ánh sáng (lux)"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:layout_weight="1"
+                    android:textColor="@color/design_default_color_primary" android:textSize="18sp"/>
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" android:id="@+id/txt_light_value" android:layout_weight="1"
+                    android:textAlignment="textEnd" tools:text="30" android:textSize="26sp"
+                    android:textColor="@color/design_default_color_primary" android:textStyle="bold"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>

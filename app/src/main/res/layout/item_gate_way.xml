@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:id="@+id/txt_gate_name"
                     android:textStyle="bold"
-                    android:textSize="20sp"
+                    android:textSize="18sp"
                     android:textColor="@color/black"
                     tools:text="Gate Name"/>
 

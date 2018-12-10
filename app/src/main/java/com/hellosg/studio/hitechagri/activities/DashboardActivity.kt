@@ -13,6 +13,7 @@ import com.hellosg.studio.hitechagri.fragments.EditGateBottomSheet
 import com.hellosg.studio.hitechagri.models.GateWay
 import com.hellosg.studio.hitechagri.R
 import kotlinx.android.synthetic.main.activity_dashboard.*
+import org.jetbrains.anko.intentFor
 
 class DashboardActivity : AppCompatActivity(),
     AddGateBottomSheet.OnAddClickListener,
@@ -59,11 +60,7 @@ class DashboardActivity : AppCompatActivity(),
 
         val adapter = GateAdapter(gateList,
             { gateWay ->
-                Toast.makeText(
-                    this@DashboardActivity,
-                    "Clicked",
-                    Toast.LENGTH_SHORT
-                ).show()
+                startActivity(intentFor<GateMonitoringActivity>())
             },
             { gateWay ->
                 editBottomSheet = EditGateBottomSheet.newInstance(gateWay)
@@ -74,7 +71,7 @@ class DashboardActivity : AppCompatActivity(),
                 deleteBottomSheet.show(supportFragmentManager, deleteBottomSheet.tag)
             })
 
-        rv_list_device.apply {
+        rv_list_node.apply {
             setAdapter(adapter)
             setHasFixedSize(false)
             layoutManager = LinearLayoutManager(this@DashboardActivity,
@@ -83,8 +80,8 @@ class DashboardActivity : AppCompatActivity(),
         }
 
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
-            rv_list_device.setOnScrollChangeListener { _, _, _, _, _ ->
-                header.isSelected = rv_list_device.canScrollVertically(-1)
+            rv_list_node.setOnScrollChangeListener { _, _, _, _, _ ->
+                header.isSelected = rv_list_node.canScrollVertically(-1)
             }
         }
 
@@ -95,6 +92,5 @@ class DashboardActivity : AppCompatActivity(),
 
         topToolbar.inflateMenu(R.menu.menu_dashboard)
         topToolbar.title = "Tổng quan"
-        topToolbar.subtitle = "Danh sách bộ điều khiển trung tâm"
     }
 }
