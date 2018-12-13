@@ -4,4 +4,5 @@
           android:icon="@drawable/ic_sync_black_24dp"
           android:title="Sync"
           app:showAsAction="always"/>
+    <item android:title="Test setup" android:id="@+id/test_setup_action" app:showAsAction="never"/>
 </menu>

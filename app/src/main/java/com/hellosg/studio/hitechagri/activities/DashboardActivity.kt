@@ -2,6 +2,8 @@ package com.hellosg.studio.hitechagri.activities
 
 import android.os.Build
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,6 +16,7 @@ import com.hellosg.studio.hitechagri.models.GateWay
 import com.hellosg.studio.hitechagri.R
 import kotlinx.android.synthetic.main.activity_dashboard.*
 import org.jetbrains.anko.intentFor
+import org.jetbrains.anko.startActivity
 
 class DashboardActivity : AppCompatActivity(),
     AddGateBottomSheet.OnAddClickListener,
@@ -92,5 +95,15 @@ class DashboardActivity : AppCompatActivity(),
 
         topToolbar.inflateMenu(R.menu.menu_dashboard)
         topToolbar.title = "Tổng quan"
+        topToolbar.setOnMenuItemClickListener {
+            when (it.itemId) {
+                R.id.test_setup_action -> {
+                    startActivity(intentFor<NodeSetupActivity>())
+                }
+            }
+            true
+        }
+
     }
+
 }

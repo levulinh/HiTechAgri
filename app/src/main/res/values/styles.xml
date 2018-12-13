@@ -13,8 +13,12 @@
         <item name="windowNoTitle">true</item>
         <item name="android:textColorPrimary">#222</item>
         <item name="android:fontFamily">@font/google_sans</item>
-        <item name="android:textColorSecondary">@color/white</item>
+        <item name="android:textColorSecondary">@color/color_dark</item>
         <!--<item name="bottomSheetDialogTheme">@style/BaseBottomSheetDialog</item>-->
+    </style>
+
+    <style name="ToolbarColoredBackArrow" parent="AppTheme">
+        <item name="android:textColorSecondary">#222</item>
     </style>
 
 </resources>

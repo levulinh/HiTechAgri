@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".activities.GateMonitoringActivity">
         </activity>
+        <activity android:name=".activities.NodeSetupActivity">
+        </activity>
     </application>
 
 </manifest>
