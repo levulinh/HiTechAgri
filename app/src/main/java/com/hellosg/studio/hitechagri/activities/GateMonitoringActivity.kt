@@ -25,6 +25,7 @@ class GateMonitoringActivity : AppCompatActivity(),
 
     override fun onDeleteClick(node: Node) {
         deleteBottomSheet.dismiss()
+
     }
 
     override fun onAddClick(name: String, id: String) {

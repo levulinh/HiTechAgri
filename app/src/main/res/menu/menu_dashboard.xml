@@ -5,4 +5,5 @@
           android:title="Sync"
           app:showAsAction="always"/>
     <item android:title="Test setup" android:id="@+id/test_setup_action" app:showAsAction="never"/>
+    <item android:title="Test chart" android:id="@+id/test_chart_action" app:showAsAction="never"/>
 </menu>

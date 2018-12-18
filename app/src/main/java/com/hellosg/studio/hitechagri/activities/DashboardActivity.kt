@@ -100,6 +100,10 @@ class DashboardActivity : AppCompatActivity(),
                 R.id.test_setup_action -> {
                     startActivity(intentFor<NodeSetupActivity>())
                 }
+
+                R.id.test_chart_action -> {
+                    startActivity(intentFor<ChartActivity>())
+                }
             }
             true
         }

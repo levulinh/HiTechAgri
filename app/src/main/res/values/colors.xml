@@ -17,5 +17,6 @@
     <color name="light_brown">#ded5d5</color>
     <color name="brown">#5d4037</color>
     <color name="light_blue">#c7d3fa</color>
-    <color name="gray">#ddd</color>
+    <color name="gray">#c7c7c7</color>
+    <color name="dark_green">#66bb6a</color>
 </resources>
